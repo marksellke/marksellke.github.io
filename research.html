@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mark Sellke</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Files/stanfordfavicon.ico">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+    line-height:22px;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #4888A1;
+    color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+
+/* Main column */
+.main {
+    flex: 65%;
+    background-color: white;
+    padding: 30px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    max-width: 100%;
+}
+
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Note -->
+<!-- Header -->
+<div class="header">
+  <h1>Mark Sellke</h1>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="main">Main</a>
+  <a href="research">Research</a>
+    <a href="contests">Math Contests</a>
+<!--     <a href="misc">Misc</a> -->
+</div>
+
+<!-- The flexible grid (content) -->
+<!-- <div class="row">
+  <div class="side">
+      <h3>Mark Sellke</h3>
+      <img class="fakeimg" style="height:200px;" src="Files/FSP_Pic_New" alt="mark" />
+      <h3>Contact</h3>
+      <p>[not mselke but] msellke [at] stanford [dot] edu</p>
+      <p>450 Jane Stanford Way, Stanford, CA 94305</p>
+     <p><a href="resume.pdf"><b>Resume</b></a></p> -->
+       <!-- <p><a href="Files/Sellke_CV.pdf"><b>CV</b></a></p> -->
+    <!--   <p><img src="mit.gif" alt="mit logo" /></p>
+      <p><img width="150px" src="orc.png" alt="orc logo" /></p> -->
+  <!-- </div> --> 
+
+  <div class="main" >
+
+    <div style="margin-left:45px;width:auto;line-height: 1.5">
+
+
+
+    <br>
+
+    <h2 id="research">Research</h2>
+
+    See also <a href="https://scholar.google.com/citations?hl=en&user=lXCP2cMAAAAJ&view_op=list_works">Google Scholar</a> or <a href="https://arxiv.org/search/?query=Sellke%2C+Mark&searchtype=author&abstracts=hide&order=-announced_date_first&size=100">arXiv</a>. Some videos below are by collaborators.
+
+    <h3 id="research">Probability</h3>
+
+
+    <p style="margin-left: 40px"> <b> Free Energy Subadditivity for Symmetric Random Hamiltonians</b> 
+      <br> <a href=https://arxiv.org/abs/2208.11279/>arXiv</a> 
+
+
+    <p style="margin-left: 40px"> <b>Sampling from the Sherrington-Kirkpatrick Gibbs measure via algorithmic stochastic localization</b>  
+        <br> With Ahmed El Alaoui and Andrea Montanari. 
+        <br> <i>FOCS 2022 </i>
+        <br> <a href=https://arxiv.org/abs/2203.05093/>arXiv</a>
+
+        
+    <p style="margin-left: 40px"> <b>Local algorithms for Maximum Cut and Minimum Bisection on locally treelike regular graphs of large degree</b>  <br> With Ahmed El Alaoui and Andrea Montanari. <br> <a href=https://arxiv.org/abs/2111.06813/>arXiv</a>
+
+
+    <p style="margin-left: 40px"> <b> Tight Lipschitz Hardness for Optimizing Mean Field Spin Glasses</b>  <br> With Brice Huang. 
+        <br> <i>FOCS 2022 </i>
+        <br> <a href=https://arxiv.org/abs/2110.07847/>arXiv</a> <a href=Files/branching_OGP_talk.pdf>Slides</a> <a href=https://www.youtube.com/watch?v=DvEHxbVGah4/>Video</a> </p>
+
+
+    <p style="margin-left: 40px"> <b> Optimizing Mean-Field Spin Glasses with External Field</b>  <br> <a href=https://arxiv.org/abs/2105.03506/>arXiv</a></p>
+
+    <p style="margin-left: 40px"> <b> Cutoff for the Asymmetric Riffle Shuffle</b> <br> <i>Annals of Probability</i>, accepted.
+      <br> <a href=https://arxiv.org/abs/2103.05068/>arXiv</a> <a href=Files/chicago-talk.pdf>Slides</a></p>
+
+    <p style="margin-left: 40px"> <b> Algorithmic Pure States for the Negative Spherical Perceptron</b>  <br> With Ahmed El Alaoui. 
+        <br> <i>Journal of Statistical Physics</i>, accepted.
+        <br> <a href=https://arxiv.org/abs/2010.15811/>arXiv</a>&nbsp;<a href=Files/Negative_Perceptron_Slides.pptx>Slides</a> <a href=http://www.birs.ca/events/2021/5-day-workshops/21w5108/videos/watch/202108100916-Sellke.html/>Video</a> </p>
+
+    <p style="margin-left: 40px"> <b> Approximate Ground States of Hypercube Spin Glasses are Near Corners</b>  <br> <i> Comptes Rendus Math&eacute;matique, Vol. 359 (2021) no. 9, 1097-1105. </i> 
+    <br> 
+    <a href=https://comptes-rendus.academie-sciences.fr/mathematique/articles/10.5802/crmath.240/>Journal</a> <a href=https://arxiv.org/abs/2009.09316/>arXiv</a></p>
+
+
+    <p style="margin-left: 40px"> <b> Optimization of Mean-Field Spin Glasses</b> <br> With Ahmed El Alaoui and Andrea Montanari. <br> <i>Annals of Probability, Vol. 49 (2021) no. 6, 2922-2960. </i> <br> 
+    <a href=https://projecteuclid.org/journals/annals-of-probability/volume-49/issue-6/Optimization-of-mean-field-spin-glasses/10.1214/21-AOP1519.short/>Journal</a> <a href=https://arxiv.org/abs/2001.00904/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=Ii8sERq5Hz0/>Video</a></p>
+
+    <h3 id="research">Online Algorithms</h3>
+
+    <p style="margin-left: 40px"> <b> Metrical Service Systems with Transformations</b> <br> With S&eacute;bastien Bubeck, Niv Buchbinder, and Christian Coester. <br> <i>ITCS 2021 </i> <br> <a href=https://drops.dagstuhl.de/opus/volltexte/2021/13560/pdf/LIPIcs-ITCS-2021-21.pdf>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2009.08266/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=0UvscSl8N0k/>Video</a></p>
+
+    <p style="margin-left: 40px"> <b> Online Multiserver Convex Chasing and Optimization</b> <br> With S&eacute;bastien Bubeck and Yuval Rabani. <br> <i>SODA 2021 </i> <br> <a href=https://dl.acm.org/doi/10.5555/3458064.3458189>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2004.07346/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=Kx1_44_wf_4/>Video</a></p>
+
+    <p style="margin-left: 40px"> <b> Chasing Convex Bodies Optimally</b> <br> <i> GAFA Seminar Notes</i>, accepted. <br>
+    Conference version in <i>SODA 2020</i>. Awarded <b><font color="red">Best Paper</font></b> and <b><font color="red">Best Student Paper</font></b>.
+    <br> <a href=https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.92>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1905.11968/>arXiv</a>&nbsp;<a href=Files/CBC_FSP_2019.pptx>Slides</a>&nbsp;<a href=https://www.youtube.com/watch?v=6RowSEXXIkk/>Long Video</a>&nbsp;<a href=https://www.youtube.com/watch?v=zb6JVBp77hM&feature=youtu.be/>Short Video</a>&nbsp;<a href=https://blogs.princeton.edu/imabandit/2019/11/05/convex-body-chasing-steiner-point-sellke-point-and-soda-2020-best-papers/>Blog post by S&eacute;bastien </a></p>
+
+    <p style="margin-left: 40px"> <b> Chasing Nested Convex Bodies Nearly Optimally</b> <br>With S&eacute;bastien Bubeck, Bo'az Klartag, Yin Tat Lee, and Yuanzhi Li. <br>  <i>SODA 2020</i> <br><a href=https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.91>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1811.00999/>arXiv</a>&nbsp;<a href=Files/SODA_2020_ChasingNested.pptx>Slides</a>
+
+    <p style="margin-left: 40px"> <b> Competitively Chasing Convex Bodies</b> <br>With S&eacute;bastien Bubeck, Yin Tat Lee, and Yuanzhi Li. <br><i>STOC 2019.</i> <b>Invited to the SICOMP special issue.</b> <br> <a href=https://dl.acm.org/doi/abs/10.1145/3313276.3316314/>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1811.00887/>arXiv</a>&nbsp;<a href=Files/CBCSTOC2019Final.pptx>Slides</a>&nbsp;<a href=https://www.youtube.com/watch?v=jCVIuvkY_3M&t=1s/>Long Video</a>&nbsp;<a href=https://www.youtube.com/watch?v=lHwGKBohS9w&feature=youtu.be/>Short Video</a>
+
+    <h3 id="research">Multi-Armed Bandits</h3>
+
+    
+    <p style="margin-left: 40px"> <b> The Pareto Frontier of Instance-Dependent Guarantees in Multi-Player Multi-Armed Bandits with no Communication</b> 
+    <br> With Allen Liu. 
+    <br>
+    <i>COLT 2022 </i>
+    <br> <a href=https://arxiv.org/abs/2202.09653/>arXiv</a>&nbsp;<a href=Files/Simons-5-4.pdf>Slides</a>&nbsp;<a href=https://www.youtube.com/watch?v=J-H8ka4Zhfc>Video</a>&nbsp;<a href=https://twitter.com/geoishard/status/1495960562249105409/>Twitter</a>
+
+
+    <p style="margin-left: 40px"> <b> Cooperative and Stochastic Multi-Player Multi-Armed Bandit: Optimal Regret With Neither Communication Nor Collisions</b> 
+    <br> 
+    With S&eacute;bastien Bubeck and Thomas Budzinski. 
+    <br>
+    <i>COLT 2021 </i>
+    <br> 
+    <a href=http://proceedings.mlr.press/v134/bubeck21b.html>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2011.03896/>arXiv</a>&nbsp;<a href=Files/2021_long.pdf>Slides</a>&nbsp;<a href=http://www.learningtheory.org/colt2021/virtual/poster_54.html>Video</a>&nbsp;<a href=Files/multiplayer-poster.pdf>Poster</a>&nbsp;<a href=https://mobile.twitter.com/SebastienBubeck/status/1326041714054762498/>Twitter</a>
+
+
+    <p style="margin-left: 40px"> <b> The Price of Incentivizing Exploration: A Characterization via Thompson Sampling and Sample Complexity</b> 
+    <br> 
+    With Alex Slivkins. 
+    <br>
+    Major revision in <i>Operations Research</i>
+    <br>
+    Extended abstract in <i>EC 2021</i> 
+    <br>
+    <a href=https://dl.acm.org/doi/abs/10.1145/3465456.3467549>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2002.00558/>arXiv</a>&nbsp;<a href=Files/PoIE_TS_Long.pptx>Slides</a>&nbsp;<a href=Files/NeurIPS-2021.pdf>Poster</a> 
+
+    <p style="margin-left: 40px"> <b> Non-Stochastic Multi-Player Multi-Armed Bandits: Optimal Rate With Collision Information, Sublinear Without</b> <br>  With S&eacute;bastien Bubeck, Yuanzhi Li, and Yuval Peres. <br><i>COLT 2020</i> <br><a href=http://proceedings.mlr.press/v125/bubeck20c.html>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1904.12233/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=6VjmsZC4ogU/>Video</a> 
+
+    <p style="margin-left: 40px"> <b> First-Order Bayesian Regret Analysis of Thompson Sampling</b> <br> 
+    With S&eacute;bastien Bubeck. 
+    <br>
+    Major Revision in <i>IEEE Transactions on Information Theory</i>
+    <br>
+    Conference version in <i>ALT 2020</i> 
+    <br>  <a href=http://proceedings.mlr.press/v117/bubeck20a/bubeck20a.pdf>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1902.00681/>arXiv</a>&nbsp;<a href=Files/SmallLossThompsonSlides.pdf>Slides</a> 
+
+    <h3 id="research">Other Machine Learning</h3>
+
+
+    <p style="margin-left: 40px"> <b> Iterative Feature Matching: Toward Provable Domain Generalization with Logarithmic Environments</b> <br> With Yining Chen, Elan Rosenfeld, Tengyu Ma, and Andrej Risteski.  
+    <br>
+    <a href=https://arxiv.org/abs/2106.09913/>arXiv</a>&nbsp;<a href=https://mobile.twitter.com/tengyuma/status/1408128745697792007/>Twitter</a>
+
+    <p style="margin-left: 40px"> <b> A Universal Law of Robustness via Isoperimetry</b> <br> With S&eacute;bastien Bubeck. <br><i>NeurIPS 2021.</i> Awarded <b><font color="red">Outstanding Paper</font></b>.
+     <br><a href=https://papers.nips.cc/paper/2021/hash/f197002b9a0853eca5e046d9ca4663d5-Abstract.html>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2105.12806/>arXiv</a>&nbsp;<a href=Files/NeurIPS_15_min.pdf>Slides</a>&nbsp;<a href=https://www.youtube.com/watch?v=D3uI0oATFws/>Long Video</a>&nbsp;<a href=https://www.youtube.com/watch?v=OzGguadEHOU/>Medium Video</a>&nbsp;<a href=https://www.youtube.com/watch?v=ujMvnQpP528/>Short Video</a>&nbsp;<a href=Files/NeurIPS-2021-poster.pdf>Poster</a>&nbsp;<a href=https://mobile.twitter.com/SebastienBubeck/status/1402645428504461319/>Twitter</a>
+     <br>
+     Featured in <a href=https://www.quantamagazine.org/computer-scientists-prove-why-bigger-neural-networks-do-better-20220210/>Quanta</a>
+
+
+
+
+     <p style="margin-left: 40px"> <b> Approximating Continuous Functions by ReLU Nets of Minimal Width</b> <br> With Boris Hanin.  <br><a href=https://arxiv.org/abs/1710.11278/>arXiv</a>
+
+
+    <h3 id="research">Representations of Finite Groups</h3>
+
+    <p style="margin-left: 40px"> <b> Tensor Quasi-Random Groups</b> <br> <i>Proceedings of the AMS Series B, Vol. 9 (2022), 12-21. </i>
+        <br>
+     <a href=https://www.ams.org/journals/bproc/2022-09-02/S2330-1511-2022-00086-5/>Journal</a>&nbsp;<a href=https://arxiv.org/abs/2103.11048/>arXiv</a> 
+
+      
+
+    <p style="margin-left: 40px"> <b> Covering Irrep(S<sub>n</sub>) With Tensor Products and Powers</b> <br> <a href=https://arxiv.org/abs/2004.05283/>arXiv</a>
+
+    <p style="margin-left: 40px"> <b> The Saxl Conjecture for Fourth Powers via the Semigroup Property</b> <br> With Sammy Luo. <br> <i>Journal of Algebraic Combinatorics Vol. 45 (2017), 33-80</i>  <br> <a href=https://link.springer.com/article/10.1007/s10801-016-0700-z/>Journal</a>&nbsp;<a href=https://arxiv.org/abs/1511.02387/>arXiv</a>&nbsp;<a href=Files/SaxlFourthPower.pptx>Slides</a> 
+
+    <h3 id="research">Control Theory</h3>
+
+    <p style="margin-left: 40px"> <b> Exact Minimum Number of Bits to Stabilize a Linear System</b> <br>With Victoria Kostina, Yuval Peres, and Gireeja Ranade. <br> <i>IEEE Transactions on Automatic Control, November 2021</i>.
+    <br> 
+    Conference version in <i>IEEE Conference on Decision and Control 2018</i> 
+    <br>
+    <a href=https://ieeexplore.ieee.org/document/9609599> Journal</a>&nbsp;<a href=https://ieeexplore.ieee.org/abstract/document/8619156>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1807.07686/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=ypcuvhDO-EA/>Video</a> 
+
+    <p style="margin-left: 40px"> <b> Stabilizing a System with an Unbounded Random Gain Using Only Finitely Many Bits</b> <br> With Victoria Kostina, Yuval Peres, and Gireeja Ranade. <br> <i> IEEE Transactions on Information Theory, Vol. 67, no. 4, pp. 2554-2561, Apr. 2021.</i> <br> Conference version in <i>IEEE ISIT 2018</i> <br> 
+    <a href=https://ieeexplore.ieee.org/document/9343760?source=authoralert> Journal</a>&nbsp;<a href=https://ieeexplore.ieee.org/abstract/document/8437548>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/1805.05535/>arXiv</a>
+
+
+
+    <h3 id="research">Miscellaneous</h3>
+
+
+    <p style="margin-left: 40px"> <b> Tight Bounds for State Tomography with Incoherent Measurements </b> <br> With Sitan Chen, Brice Huang, Jerry Li, and Allen Liu.  
+    <br>
+    <a href=https://arxiv.org/abs/2206.05265/>arXiv</a>
+
+
+    <p style="margin-left: 40px"> <b> Metric Transforms and Low Rank Matrices via Representation Theory of the Real Hyperrectangle </b> <br> With Josh Alman, Timothy Chu, Gary Miller, Shyam Narayanan, and Zhao Song.  <br><a href=https://arxiv.org/abs/2011.11503/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=z33gwRj7xqs/>Video</a> 
+
+
+    <p style="margin-left: 40px"> <b> Vertex Sparsification for Edge Connectivity</b>  <br> With Parinya Chalermsook, Syamantak Das, Yunbum Kook, Bundit Laekhanukit, Yang P. Liu, Richard Peng, and Daniel Vaz. <br> (Merge and extension of <a href=https://arxiv.org/abs/1910.10359/>this</a> paper and <a href=https://arxiv.org/abs/1910.10665/>this</a> paper)<br> <i> SODA 2021 </i> <br> <a href=https://dl.acm.org/doi/10.5555/3458064.3458138>Proceedings</a>&nbsp;<a href=https://arxiv.org/abs/2007.07862/>arXiv</a>&nbsp;<a href=https://www.youtube.com/watch?v=i55rt7Hmmfc/>Video</a> 
+
+    <p style="margin-left: 40px"> <b> Biomimetic Six-Axis Robots Replicate Human Cardiac Papillary Muscle Motion: Pioneering the Next Generation of Biomechanical Heart Simulator Technology </b> <br> With Annabel M. Imbrie-Moore, Matthew H. Park, Michael J. Paulsen, Rohun Kulkami, Hanjay Wang, Yuanjia Zhu, Justin M. Farry, Alexandra T. Bourdillon, Christine Callinan, Haley J. Lucian, Camille E. Hironaka, Daniela Deschamps and Y. Joseph Woo. <br> <i> Journal of the Royal Society Interface, Vol. 17, Issue 173 (2020) </i> 
+        <br>
+        <a href=https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0614>Journal</a>
+        <a href=https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0614>pdf</a>
+
+   
+
+    <p style="margin-left: 40px"> <b> On the Number of 2-protected Nodes in Tries and Suffix Trees</b> <br>With Jeffrey Gaither, Yushi Homma, and Mark Daniel Ward. <br> <i> Discrete Mathematics and Theoretical Computer Science, Vol. AQ (2012), 381-398 </i><br> <a href=https://dmtcs.episciences.org/3008/>Journal</a>
+
+     <!-- 
+
+
+      <p style="margin-left: 40px"> <a href=https://math.mit.edu/research/undergraduate/urop-plus/documents/2016/Sellke.pdf>An Introduction to Imaginary Geometry</a>. MIT UROP+, summer 2016. </p>
+
+      <p style="margin-left: 40px"> <a href=http://math.mit.edu/~csikvari/4-term_arithmetic_progressions.pdf>Gowers' Proof of Szemer&eacute;di's Theorem for Four Term Arithmetic Progressions</a>. With Victor Wang. Final Paper for Reading Seminar in Discrete Fourier Analysis, spring 2016. </p> -->
+
+      
+
+      
+ 
+      <!-- 
+  
+   
+      <h3 id="research">Coauthors</h3>
+
+      <a href=https://elalaoui.stat.cornell.edu/>Ahmed El Alaoui</a>,
+     
+      <a href=http://sbubeck.com/>S&eacute;bastien Bubeck</a>, 
+
+      <a href=https://www.tau.ac.il/~nivb/>Niv Buchbinder</a>,
+
+      <a href=http://perso.ens-lyon.fr/thomas.budzinski/index.html>Thomas Budzinski</a>,      
+
+      <a href=https://sites.google.com/site/parinyachalermsook/>Parinya Chalermsook</a>,
+
+      <a href=https://timchu.github.io/>Timothy Chu</a>,
+
+      <a href=https://www.cwi.nl/people/christian-coester>Christian Coester</a>,      
+
+      <a href=http://faculty.iiitd.ac.in/~syamantak/>Syamantak Das</a>,      
+
+      <a href=https://www.asc.ohio-state.edu/gaither.16/>Jeffrey Gaither</a>,
+
+       <a href=https://hanin.princeton.edu//>Boris Hanin</a>,
+
+       <a href=https://www.linkedin.com/in/yushihomma3/>Yushi Homma</a>,
+
+        <a href=https://www.weizmann.ac.il/math/klartag/home/>Bo'az Klartag</a>,
+
+        <a href=https://yunbum-kook.github.io//>Yunbum Kook</a>,
+
+        <a href=http://vkostina.caltech.edu/>Victoria Kostina</a>,
+
+        <a href=http://itcs.shufe.edu.cn/~blaekh/>Bundit Laekhanukit</a>, 
+
+       <a href=http://yintat.com/>Yin Tat Lee</a>, 
+
+       <a href=https://www.andrew.cmu.edu/user/yuanzhil/>Yuanzhi Li</a>,
+
+       <a href=https://yangpliu.github.io/>Yang P. Liu</a>,
+
+       <a href=https://mathematics.stanford.edu/people/sammy-luo/>Sammy Luo</a>,
+
+       <a href=http://www.cs.cmu.edu/~glmiller/>Gary Miller</a>,
+
+       <a href=https://web.stanford.edu/~montanar/>Andrea Montanari</a>,
+
+       <a href=https://sites.google.com/view/shyamnarayanan/home>Shyam Narayanan</a>,
+
+       <a href=https://www.cc.gatech.edu/~rpeng/>Richard Peng</a>,
+
+        <a href=http://yuvalperes.com/>Yuval Peres</a>,
+
+        <a href=https://www.cse.huji.ac.il/~yrabani/Yuval_Rabani/Yuval_Rabani.html>Yuval Rabani</a>,
+
+        <a href=http://people.eecs.berkeley.edu/~gireeja/>Gireeja Ranade</a>,
+
+         <a href=https://www.microsoft.com/en-us/research/people/slivkins/>Alex Slivkins</a>,
+
+          <a href=https://www.dvaz.net/>Daniel Vaz</a>,
+
+        <a href=http://www.stat.purdue.edu/~mdw/>Mark Daniel Ward</a>.
+
+      
+ -->
+
+      
+     
+  <br>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
