@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STAT 291: Random High-Dimensional Optimization: Landscapes and Algorithmic Barriers</title>
+    <!-- <style>
+        body { font-family: Arial, sans-serif; }
+        .header { background-color: #f2f2f2; padding: 10px; text-align: center; }
+        .content { margin: 20px; }
+        .section { margin-bottom: 20px; }
+        .footer { text-align: center; padding: 10px; background-color: #f2f2f2; }
+    </style> -->
+    <style>
+    body { font-family: Arial, sans-serif; }
+    .header { background-color: #A51C30; color: white; padding: 10px; text-align: center; } /* Crimson background with white text for the header */
+    .content { margin: 20px; }
+    .section { margin-bottom: 20px; }
+    .section h2 { color: #A51C30; } /* Crimson color for section headings */
+    .footer { text-align: center; padding: 10px; background-color: #A51C30; color: white; } /* Crimson background with white text for the footer */
+</style>
+
+</head>
+<body>
+    <div class="header">
+        <h1>STAT 291, Spring 2024
+            <br>
+        Random High-Dimensional Optimization: Landscapes and Algorithmic Barriers
+        
+        </h1>
+    </div>
+    <div class="content">
+        <div class="section">
+            <h2>Instructor</h2>
+            <p>Mark Sellke (msellke@fas.harvard.edu)</p>
+        </div>
+        <div class="section">
+            <h2>Teaching Fellow</h2>
+            <p>Yufan Li (yufan_li@g.harvard.edu)</p>
+        </div>
+
+        <div class="section">
+            <h2>Course Description</h2>
+            <p> This is a graduate topics course focusing on paradigmatic optimization problems with random objective functions. We will develop the tools needed to understand the geometric behavior of complex random landscapes, the different phase transitions that can occur, and how these transitions are linked to the success and failure of efficient algorithms. Topics will include: 
+        <ul>
+        <li>Random constraint satisfaction problems, spin glasses, and tensor PCA</li>
+        <li> Landscape complexity via critical point counting</li>
+        <li> The overlap gap property as a geometric barrier to optimization</li>
+        <li> Implications for Markov chain sampling</li>
+        <li>  Combining these ideas to prove the spherical Parisi formula</li>
+        </ul>   
+        </div>
+
+        <div class="section">
+            <h2>Homework</h2>
+            <p>
+                
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Meeting Time</h2>
+            <p>Tuesday/Thursday, 10:30am-11:45am, Science Center 309A</p>
+        </div>
+
+        <div class="section">
+            <h2>Office Hours</h2>
+            <p></p>
+        </div>
+
+        <div class="section">
+    <h2>Course Schedule (subject to change)</h2>
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Topic</th>
+        <th>Link to Notes</th>
+        <th>Other References and Resources</th>
+    </tr>
+    <tr>
+        <td>01/23</td>
+        <td>Course logistics, overview of phase transitions in disordered landscapes</td>
+        <td>
+        &nbsp;
+        <a href="slides_notes/Lecture_1.pptx">
+        [Slides]</a>  
+        </td>
+        <td>
+        Predicted phase diagram: 
+        <a href="https://www.pnas.org/doi/10.1073/pnas.0703685104">[Krzakala-Montanari-Ricci&ndash;Tersenghi-Zdeborova]</a>
+        <br>
+        Tensor PCA:
+        <a href="https://arxiv.org/pdf/1411.1076.pdf">
+        [Montanari-Richard]</a>  
+        <br>
+        Random XOR-SAT:
+        <a href="https://ieeexplore.ieee.org/document/1182002">
+        [Dubois-Mandler]</a> for 3-XORSAT threshold,
+        <a href="https://arxiv.org/abs/1107.5377">
+        [Ibrahimi-Kanoria-Kraning-Montanari]</a> for structural transition,
+        <a href="https://arxiv.org/abs/1710.07497">[Ayre-Coja–Oghlan-Gao-Müller]</a> for general satisfiability threshold
+    </td>
+    </tr>
+    <tr>
+        <td>01/25</td>
+        <td>Free energies, moment computations</td>
+        <td>
+        </td>
+        <td>
+
+        </td>
+    </tr>
+
+        <tr>
+        <td>01/30</td>
+        <td>Concentration-enhanced second moment method, failure for external fields</td>
+        <td>
+            
+        </td>
+        <td>
+        
+        </td>
+    </tr>
+
+    <tr>
+        <td>02/01</td>
+        <td>Geometric and statistical consequences of annealed free energy</td>
+        <td>
+
+        </td>
+        <td>
+        
+        </td>
+    </tr>
+    <!-- Additional rows for the rest of the dates -->
+    <tr>
+        <td>02/06</td>
+        <td>Kac-Rice I: general formula</td>
+        <td>
+ 
+        </td>
+        <td>
+           <!--  1-dimensional examples: 
+            <a href="https://www3.nd.edu/~lnicolae/Kac_Rice.pdf">[Nicolaescu]</a>
+            <br>
+            Book Treatments: 
+            <a href="https://arxiv.org/abs/2205.08742">[Berzin-Latour-Léon]</a>,
+            <a href="https://link.springer.com/book/10.1007/978-0-3 87-48116-6">[Adler-Taylor]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>02/08</td>
+        <td>Kac-Rice II: spherical spin glasses without external field</td>
+        <td>
+    
+        </td>
+        <td>
+            <!-- 1st moment analysis:
+            <a href="https://arxiv.org/abs/1003.1129">[Auffinger-Ben Arous-Černý]</a>, <a href="https://arxiv.org/abs/1110.5872">[Auffinger-Ben Arous]</a>
+            <br>
+            2nd moment:
+            <a href="https://arxiv.org/abs/1504.02251">[Subag 15]</a>
+            <br>
+            Comprehensive analysis of random determinants: <a href="https://arxiv.org/abs/2105.05000">[Ben Arous-Bourgade-McKenna]</a>
+            <br>
+            Survey:
+            <a href="https://arxiv.org/abs/2209.07975">[Ros-Fyodorov]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>02/13</td>
+        <td>Kac-Rice III: topological trivialization and spiked tensors</td>
+        <td>
+          
+        </td>
+        <td>
+            <!-- Spin glasses with external field: 
+            <a href="https://arxiv.org/abs/2104.06345">[Belius-Černý-Nakajima-Schmidt]</a>
+            <br>
+            Strong topological trivialization: 
+            <a href="https://arxiv.org/abs/2308.09677">[Huang-Sellke-23b]</a>
+            <br>
+            Spiked tensors: 
+            <a href="https://arxiv.org/abs/1711.05424">[Ben Arous-Mei-Montanari-Nica]</a>,
+            <a href="https://arxiv.org/abs/2106.09768">[Auffinger-Ben Arous-Li]</a>
+            <br>
+            Tensor decomposition:
+            <a href="https://arxiv.org/abs/1706.05598">[Ge-Ma]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>02/15</td>
+        <td>Langevin dynamics</td>
+        <td></td>
+        <td>
+        <!-- Dynamical equations for Langevin dynamics: 
+        <a href="https://arxiv.org/abs/math/0409273">[Ben Arous-Dembo-Guionnet]</a>,
+            <a href="https://link.springer.com/article/10.1007/s10955-006-9239-z">[Dembo-Guionnet-Mazza]</a>
+        <br>
+        Fast mixing at high temperature:
+            <a href="https://arxiv.org/abs/1608.06609">[Gheissari-Jagannath]</a>  
+        <br>
+        Fast mixing for Ising spin glasses: 
+            <a href="https://arxiv.org/abs/2007.08200">[Eldan-Koehler-Zeitouni]</a>,
+            <a href="https://arxiv.org/abs/2208.07844">[Adhikari-Brenneck-Xu-Yau]</a>,
+            <a href="https://arxiv.org/pdf/2307.10466.pdf">[Anari-Jain-Koehler-Pham-Vuong]</a>
+        <br>
+        Optimization guarantees from landscape analysis: 
+        <a href="https://arxiv.org/abs/1902.04811">[Jin-Netrapalli-Ge-Kakade-Jordan]</a>,
+        <a href="https://arxiv.org/abs/1906.07355">[Sun-Flammarion-Fazel]</a>,
+         <a href="https://arxiv.org/abs/2305.07956">[Sellke]</a> -->
+        </td>
+    </tr>
+
+    <tr>
+        <td>02/20</td>
+        <td>No class (University Monday)</td>
+        <td>
+        --
+        </td>
+        <td>
+        --
+        </td>
+    </tr>
+
+
+
+    <tr>
+        <td>02/22</td>
+        <td>Interpolation I: Replica-symmetric bound with external field </td>
+        <td></td>
+        <td>
+         <!-- Existence of limiting free energy on the cube:
+            <a href="https://arxiv.org/abs/cond-mat/0204280">[Guerra-Toninelli]</a>   
+            <br>
+        Extension to discrete problems:
+        <a href="https://arxiv.org/abs/0912.2444">[Bayati-Gamarnik-Tetali]</a>  
+        </td> -->
+    </tr>
+<!--     <tr> (This counts as a Monday?)
+        <td>02/20</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> -->
+    <tr>
+        <td>02/27</td>
+        <td>Characterizing the high-temperature free energy phase</td>
+        <td></td>
+        <td>
+        <!-- Statistically optimal recovery from Parisi formula:
+        <a href="https://arxiv.org/abs/1812.03403">[Jagannath-Lopatto-Miolane]</a>  --> 
+        </td>
+    </tr>
+    <tr>
+        <td>02/29</td>
+        <td>Shattering at intermediate temperature</td>
+        <td></td>
+        <td>
+        <!-- Spherical case:
+        <a href="https://arxiv.org/abs/2307.04659">[Alaoui-Montanari-Sellke 23a]</a>  
+        <br>
+        Ising case:
+        <a href="https://arxiv.org/abs/2307.07461">[Gamarnik-Jagannath-Kızıldağ]</a>  
+        <br>
+        See also Chapter 16 of <a href="https://link.springer.com/book/10.1007/978-3-642-22253-5">[Talagrand]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>03/05</td>
+        <td>Slow mixing and chaos from shattering</td>
+        <td>
+
+        </td>
+        <td>
+           <!--  <a href="https://arxiv.org/abs/2307.04659">[Alaoui-Montanari-Sellke 23a]</a>
+        <br>  -->
+        <!-- Related barrier from replica symmetry breaking:
+        <a href="https://arxiv.org/abs/2310.08912">[Alaoui-Montanari-Sellke 23b]</a>  -->
+        </td>
+    </tr>
+
+    <tr>
+        <td>03/07</td>
+        <td>Stability of Langevin dynamics, fast mixing for log-concave sampling </td>
+        <td>
+        </td>
+        <td>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>Spring Break</td>
+        <td>
+        --
+        </td>
+        <td>
+        --
+        </td>
+        <td>
+        --
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>03/19</td>
+        <td>Subag's Optimization Algorithm and Ultrametricity</td>
+        <td>
+
+        </td>
+        <td>
+            <!-- Original algorithm: <a href="https://arxiv.org/abs/1812.04588">[Subag 18]</a>
+            <br>
+            Ising spin glasses: <a href="https://arxiv.org/abs/1812.10897">[Montanari]</a>, 
+            <a href="https://arxiv.org/abs/2001.00904">[Alaoui-Montanari-Sellke-20]</a>
+            <br>
+            Algorithms on sparse graphs:
+            <a href="https://arxiv.org/abs/2111.06813">[Alaoui-Montanari-Sellke-21]</a>,
+            <a href="https://arxiv.org/abs/2310.01563">[Chen-Huang-Marwaha]</a>
+            <br>
+            Solving random polynomial equations:
+            <a href="https://arxiv.org/abs/2306.13326">[Montanari-Subag]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>03/21</td>
+        <td>Overlap Gap Property and Hardness of Optimization</td>
+        <td>
+
+        </td>
+        <td>
+        <!-- Original independent set paper: <a href="https://arxiv.org/abs/1304.1831">[Gamarnik-Sudan 13]</a>
+            <br>
+        Optimal bounds using multi-OGP: 
+            <a href="https://arxiv.org/abs/1402.0485">[Rahman-Virag]</a>,
+            <a href="https://arxiv.org/abs/2010.06563">[Wein]</a>
+            <br>
+        Random k-SAT: <a href="https://epubs.siam.org/doi/10.1137/140989728">[Gamarnik-Sudan 14]</a>, <a href="https://arxiv.org/abs/2106.02129">[Bresler-Huang]</a>
+        <br>
+        Submatrices with large mean: <a href="https://arxiv.org/abs/1602.08529">[Gamarnik-Li]</a>
+        <br>
+        Symmetric binary perceptron: <a href="https://arxiv.org/abs/2203.15667">[Gamarnik-Kızıldağ-Perkins-Xu-22]</a>,
+        <a href="https://arxiv.org/abs/2302.06485">[Gamarnik-Kızıldağ-Perkins-Xu-23]</a>
+        <br>
+        Recent Survey: 
+        <a href="https://www.pnas.org/doi/full/10.1073/pnas.2108492118">[Gamarnik]</a> -->
+        </td>
+    </tr>
+
+    <tr>
+        <td>03/26</td>
+        <td>OGP for Inference Problems </td>
+        <td>
+
+        </td>
+        <td> 
+            <!-- https://arxiv.org/abs/1402.0485, https://arxiv.org/abs/2010.06563 -->
+        <!--For inference: Sparse Linear Regression
+        <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-50/issue-2/Sparse-high-dimensional-linear-regression-Estimating-squared-error-and-a/10.1214/21-AOS2130.full">[Gamarnik-Zadik]</a>
+        <br>
+        Submatrix recovery:
+        <a href="https://arxiv.org/abs/1908.09959">[Gamarnik-Jagannath-Sen]</a> -->
+        </td>
+    </tr>
+
+    <tr>
+        <td>03/28</td>
+        <td>Multi-OGP </td>
+        <td>
+
+        </td>
+        <td> 
+            <!-- https://arxiv.org/abs/1402.0485, https://arxiv.org/abs/2010.06563 -->
+        <!--For inference: Sparse Linear Regression
+        <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-50/issue-2/Sparse-high-dimensional-linear-regression-Estimating-squared-error-and-a/10.1214/21-AOS2130.full">[Gamarnik-Zadik]</a>
+        <br>
+        Submatrix recovery:
+        <a href="https://arxiv.org/abs/1908.09959">[Gamarnik-Jagannath-Sen]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>04/02</td>
+        <td>Branching OGP and optimality of Subag's algorithm </td>
+        <td></td>
+        <td>
+        <!-- Argument from class: <a href="https://arxiv.org/abs/2303.12172">[Huang-Sellke-23a]</a>
+        <br>
+        Introduction of Branching OGP: 
+        <a href="https://arxiv.org/abs/2110.07847">[Huang-Sellke-21]</a>,
+        <br>
+        Random graph alignment: 
+        <a href="https://arxiv.org/abs/2307.06590">[Du-Gong-Huang]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>04/04</td>
+        <td>General interpolation bound for the Parisi formula</td>
+        <td>
+
+        </td>
+        <td>
+        <!-- Original argument for Ising spin glasses: 
+        <a href="https://arxiv.org/abs/cond-mat/0205123">[Guerra]</a>
+        <br>
+        Spherical model: 
+        <a href="https://link.springer.com/article/10.1007/s00440-005-0433-8">[Talagrand]</a>
+        <br>
+        Ruelle cascades (chapter 2):
+        <a href="https://link.springer.com/book/10.1007/978-1-4614-6289-7">[Panchenko]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>04/09</td>
+        <td>Properties of Parisi's variational principle</td>
+        <td>
+
+        </td>
+        <td>
+            <!-- <a href="https://arxiv.org/abs/2303.12172">[Huang-Sellke-23c]</a> -->
+        </td>
+    </tr>
+    <tr>
+        <td>04/11</td>
+        <td>Proof of Spherical Parisi Formula: return of Kac-Rice</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+
+      <tr>
+        <td>04/16</td>
+        <td>Student Presentations</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>04/18</td>
+        <td>Student Presentations</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>04/23</td>
+        <td>Student Presentations</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+
+
+    <h3>Scribing Template</h3>
+
+    <ul>
+        <li><a href="scribe_template.tex">Latex Source </a></li>
+        <li><a href="scribe_template.pdf">pdf</a></li>
+    </ul>
+
+
+        <div class="section">
+    <!-- <h2>Miscellaneous Materials</h2> -->
+    <h3>Useful References on High-Dimensional Probability</h3>
+    <ul>
+        <li><a href="https://web.math.princeton.edu/~rvan/APC550.pdf">Ramon van Handel, Probability in High Dimension </a></li>
+        <li><a href="https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html">Roman Vershynin, High-Dimensional Probability </a></li>
+        <li><a href="https://chewisinho.github.io/main.pdf">Sinho Chewi, Log-Concave Sampling</a></li>
+    </ul>
+
+    <h3>Some Relevant Past Courses</h3>
+    <ul>
+        <li><a href="[https://courses.cit.cornell.edu/stsci6940/]">Ahmed El Alaoui: Topics in High-Dimensional Inference</a></li>
+        <li><a href="[https://www.stat.berkeley.edu/~songmei/Teaching/STAT260_Spring2021/index.html]">Song Mei: Mean Field Asymptotics in Statistical Learning</a></li>
+        <li><a href="[https://canvas.harvard.edu/courses/119055]">Subhabrata Sen: Methods from Statistical Physics</a></li>
+        <li><a href="[https://math.mit.edu/~nsun/f18-18177.html]">Nike Sun: Topics in Stochastic Processes</a></li>
+    </ul>
+</div>
+
+
+    </div>
+    <!-- <div class="footer">
+        <p>Department of Statistics, Harvard</p>
+    </div> -->
+</body>
+</html>
