@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name=viewport content="width=800">
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header { 
+            background-color: #A51C30;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #A51C30;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8ff;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8ff;
+        }
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f09228;
+        }
+        .course-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .semester {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>STAT 171: Stochastic Processes</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="course-title">STAT 171: Stochastic Processes</div>
+        <div class="semester">Spring 2024</div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <p>
+                Stochastic processes are probabilistic models that describe how systems evolve randomly over time. They are fundamental tools in modern statistics, providing frameworks for understanding stock market fluctuations, gene expression, climate modeling and more. This course develops the theoretical foundations of stochastic processes. We will explore how randomness and time interact in complex systems, building up from finite Markov chains to sophisticated continuous-time processes like Brownian motion.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Staff and Organization</h2>
+            <p>
+                <strong>Instructor</strong>: Mark Sellke
+                <br><br><strong>Teaching Fellow</strong>: Anvit Garg
+                <br><br><strong>Course Assistants</strong>: Alex Fleury, Aseel Rawashdeh, Duy Thuc Nguyen, Eric Tang, Ethan Wang, Matthew Tan, Rushil Mallarapu, Shirley Xiong
+                <br><br><strong>Lecture Time</strong>: Tuesday/Thursday 10:30am - 11:45am
+                <br><br><strong>Lecture Location</strong>: TBA
+                <br><br><strong>Important Websites</strong>: <a href="https://canvas.harvard.edu/courses/145623">Canvas</a>, Ed Discussion Board
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Prerequisites</h2>
+            <p>STAT 110 or comparable background in probability, and Math 21a/b.</p>
+        </div>
+
+        <div class="section">
+            <h2>Course Materials</h2>
+            <p>The textbook for this course is <a href="https://onlinelibrary-wiley-com.ezp-prod1.hul.harvard.edu/doi/book/10.1002/9781118740712">Introduction to Stochastic Processes with R</a> by Robert P. Dobrow. Students can download it for free from the Harvard Library.</p>
+        </div>
+
+        <div class="section">
+            <h2>Assignment Schedule</h2>
+            <table>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Deadline</th>
+                </tr>
+                <tr>
+                    <td>Problem Set 1</td>
+                    <td>11:59pm ET 2/7/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 2</td>
+                    <td>11:59pm ET 2/14/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 3</td>
+                    <td>11:59pm ET 2/21/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 4</td>
+                    <td>11:59pm ET 2/28/2024</td>
+                </tr>
+                <tr>
+                    <td>Midterm I</td>
+                    <td>In class, 3/4/2024 (Tuesday)</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 5</td>
+                    <td>11:59pm ET 3/14/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 6</td>
+                    <td>11:59pm ET 3/21/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 7</td>
+                    <td>11:59pm ET 3/28/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 8</td>
+                    <td>11:59pm ET 4/4/2024</td>
+                </tr>
+                <tr>
+                    <td>Midterm II</td>
+                    <td>In class, 4/8/2024 (Tuesday)</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 9</td>
+                    <td>11:59pm ET 4/18/2024</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 10</td>
+                    <td>11:59pm ET 4/25/2024</td>
+                </tr>
+                <tr>
+                    <td>Final Exam</td>
+                    <td>TBA</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Course Schedule</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Topic</th>
+                    <th>Relevant Textbook Chapters</th>
+                </tr>
+                <tr>
+                    <td>Jan 28</td>
+                    <td>Motivation, Review of probability, Introduction to random walk</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Jan 30</td>
+                    <td>Markov Chain First steps</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Feb 4</td>
+                    <td>Markov chains long time behavior</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Feb 6</td>
+                    <td>Reversibility</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Feb 11</td>
+                    <td>Absorbing chains</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Feb 13</td>
+                    <td>Branching Processes</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Feb 18</td>
+                    <td>Markov Chain Algorithms, Metropolis-Hastings</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Feb 20</td>
+                    <td>Gibbs Samplers</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Feb 25</td>
+                    <td>Markov Chain Algorithms</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Feb 27</td>
+                    <td>Review</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Mar 4</td>
+                    <td>Poisson process</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Mar 6</td>
+                    <td>Midterm I</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Mar 11</td>
+                    <td>Continuous time Markov chains</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Mar 13</td>
+                    <td>Birth-death Processes, Queues, Renewal processes</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Mar 17-21</td>
+                    <td>Spring Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Mar 25</td>
+                    <td>Long term behavior, Queues</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Mar 27</td>
+                    <td>Birth-Death chains, Martingales</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Apr 1</td>
+                    <td>Brownian motion: Introduction</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Apr 3</td>
+                    <td>Brownian motion: Computations</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Apr 8</td>
+                    <td>Brownian Motion & Gaussian processes</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Apr 10</td>
+                    <td>Midterm II</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Apr 15</td>
+                    <td>Stochastic calculus</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Apr 17</td>
+                    <td>Stochastic calculus</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Apr 22</td>
+                    <td>Stochastic Calculus</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Apr 24</td>
+                    <td>Ito's formula</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Apr 29</td>
+                    <td>Review</td>
+                    <td>-</td>
+                </tr>
+              
+                <tr>
+                    <td>TBA</td>
+                    <td>Final Exam</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
