@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name=viewport content="width=800">
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header { 
+            background-color: #A51C30;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #A51C30;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8ff;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8ff;
+        }
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f09228;
+        }
+        .course-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .semester {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>STAT 212: Probability II</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="course-title">STAT 212: Probability II</div>
+        <div class="semester">Spring 2025</div>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <p>
+                This is the second course in the graduate probability sequence, and the sequel to STAT 210.
+                The course will cover discrete-time martingale theory, Brownian motion, and Ito calculus.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Staff and Organization</h2>
+            <p>
+                <strong>Instructor</strong>: Mark Sellke (msellke@fas.harvard.edu)
+                <br><br><strong>Teaching Fellow</strong>: Somak Laha (somaklaha@fas.harvard.edu)
+                <br><br><strong>Lecture Location</strong>: Science Center 705
+                <br><br><strong>Important Websites</strong>: <a href="https://canvas.harvard.edu/courses/142675">Canvas</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Prerequisites</h2>
+            <p>Probability at the level of STAT 210, and real analysis at the level of MATH 112.</p>
+        </div>
+
+        <div class="section">
+            <h2>Course Materials</h2>
+            <p>Some useful books for this course are by <a href="https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf">Durrett</a>, 
+            <a href="https://www.mi.uni-koeln.de/~moerters/book/book.pdf">Mörters and Peres</a>, and 
+            <a href="https://link.springer.com/book/10.1007/978-3-662-06400-9">Revuz and Yor</a>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Grading</h2>
+            <p>Homework assignments (30%), Midterm (25%), Final (40%), Class participation/scribing (5%).
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Scribing</h2>
+            <p>
+            Scribe notes (both PDF and source files) should be emailed to Mark and Somak within 24 hours of the class.
+            This <a href="https://www.overleaf.com/read/vpbcrpgdvkbt#beeb85">Latex template</a> is recommended but not required (it can be copy-pasted into a new project).
+            If you are not the only scribe for the day, please consolidate your notes into a single version before sending it to us.
+            Scribes are especially encouraged to ask clarifying questions during lectures.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Assignment Schedule</h2>
+            <table>
+                <tr>
+                    <th>Assignment</th>
+                    <th>Deadline</th>
+                </tr>
+                <tr>
+                    <td>Problem Set 1</td>
+                    <td>11:59pm ET 2/7/2025</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 2</td>
+                    <td>11:59pm ET 2/21/2025</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 3</td>
+                    <td>11:59pm ET 3/7/2025</td>
+                </tr>
+                 <tr>
+                    <td>Midterm</td>
+                    <td>In class, 3/10/2025 (Monday)</td>
+                </tr>
+                <tr>
+                    <td>Problem Set 4</td>
+                    <td>11:59pm ET 4/4/2025</td>
+                </tr>
+
+                <tr>
+                    <td>Problem Set 5</td>
+                    <td>11:59pm ET 4/18/2025</td>
+                </tr>
+
+                <tr>
+                    <td>Problem Set 6</td>
+                    <td>11:59pm ET 4/30/2025</td>
+                </tr>
+               
+                <tr>
+                    <td>Final Exam</td>
+                    <td>TBA</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <h2>Submitting Problem Sets</h2>
+            Problem sets should be submitted through Gradescope, as a PDF file. 
+            The PDF may be typed (e.g. in Latex), or neatly hand-written and scanned (please check for legibility in this case).
+            <b>Make sure to select which pages correspond to which problems, to ensure all of your solutions are graded</b>.
+            See this helpful short <a href="https://www.youtube.com/watch?v=nksyA0s-Geo">video</a> for clarification.
+        
+
+        <div class="section">
+            <h2>Course Schedule (Tentative)</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Topic</th>
+                </tr>
+                <tr>
+                    <td>Jan 27</td>
+                    <td>Course Overview, Radon-Nikodym Theorem</td>
+                </tr>
+                <tr>
+                    <td>Jan 29</td>
+                    <td>Conditional Expectation and Martingales</td>
+                </tr>
+                <tr>
+                    <td>Feb 3</td>
+                    <td>Stopping Times, Crossing Inequalities, Martingale Convergence</td>
+                </tr>
+                <tr>
+                    <td>Feb 5</td>
+                    <td>L<sup>p</sup> Convergence, Maximal Inequalities</td>
+                </tr>
+                <tr>
+                    <td>Feb 10</td>
+                    <td>Backwards Martingales</td>
+                </tr>
+                <tr>
+                    <td>Feb 12</td>
+                    <td>Concentration of Martingales</td>
+                </tr>
+                <tr>
+                    <td>Feb 17</td>
+                    <td>(Holiday; no class)</td>
+                </tr>
+                <tr>
+                    <td>Feb 19</td>
+                    <td>Construction of Brownian Motion</td>
+                </tr>
+                <tr>
+                    <td>Feb 24</td>
+                    <td>Roughness of Brownian Motion</td>
+                </tr>
+                <tr>
+                    <td>Feb 26</td>
+                    <td>Convergence to Brownian Motion in Path Space</td>
+                </tr>
+                <tr>
+                    <td>Mar 3</td>
+                    <td>Brownian Motion as a Continuous Martingale</td>
+                </tr>
+                <tr>
+                    <td>Mar 5</td>
+                    <td>Strong Markov Property and Reflection Principle</td>
+                </tr>
+                <tr>
+                    <td>Mar 10</td>
+                    <td>Midterm </td>
+                </tr>
+                <tr>
+                    <td>Mar 12</td>
+                    <td>Donsker's Theorem</td>
+                </tr>
+                <tr>
+                    <td>Mar 17-21</td>
+                    <td>Spring Break</td>
+                </tr>
+                <tr>
+                    <td>Mar 24</td>
+                    <td>Finite-Variation and Paley-Wiener Integration</td>
+                </tr>
+                <tr>
+                    <td>Mar 26</td>
+                    <td>Progressively Measurable Processes, Ito Isometry</td>
+                </tr>
+                <tr>
+                    <td>Mar 31</td>
+                    <td>Stochastic Integrals as Local Martingales</td>
+                </tr>
+                <tr>
+                    <td>Apr 2</td>
+                    <td>Quadratic Variation, Lévy's Characterization of Brownian Motion</td>
+                </tr>
+                <tr>
+                    <td>Apr 7</td>
+                    <td>Stochastic Differential Equations</td>
+                </tr>
+                <tr>
+                    <td>Apr 9</td>
+                    <td>Weak and Strong Solutions</td>
+                </tr>
+                <tr>
+                    <td>Apr 14</td>
+                    <td>Ito's Formula</td>
+                </tr>
+                <tr>
+                    <td>Apr 16</td>
+                    <td>
+                    Girsanov's Theorem
+                </td>
+                </tr>
+                <tr>
+                    <td>Apr 21</td>
+                    <td>
+                        <!-- Fokker-Planck equation and Langevin Dynamics -->
+                    Stratonovich Integration and Spherical Brownian Motion
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apr 23</td>
+                    <td>
+                    Stochastic Optimal Control
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apr 28</td>
+                    <td>Diffusion Sampling</td>
+                </tr>
+
+                <tr>
+                    <td>Apr 30</td>
+                    <td>Brownian Motion and Complex Analysis </td>
+                </tr>
+
+              
+                <tr>
+                    <td>TBA</td>
+                    <td>Final Exam</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
